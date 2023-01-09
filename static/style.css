@@ -1,0 +1,77 @@
+@font-face {
+	font-family: "NF";
+	src: url(../resources/fonts/Noto_Sans_Mono_NF_Regular.ttf) format("truetype");
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "NF";
+}
+
+.Window-Frame .Close-Button, .Window-Frame .Resize-Button, .Window-Frame .Minimize-Button {
+	-webkit-app-region: no-drag;
+	position: absolute;
+	top: 6px;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	transition: all 0.2s 0s ease;
+	cursor: pointer;
+}
+
+.Window-Frame {
+	-webkit-app-region: drag;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 24px;
+	border-radius: 4px 4px 0 0;
+	border: solid rgba(0, 0, 0, 0.1254901961);
+	border-width: 1px 1px 0 1px;
+	background-color: #F0F0F0;
+}
+.Window-Frame .Title {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+	font-size: 12px;
+}
+.Window-Frame .Close-Button {
+	background-color: #F04010;
+	right: 6px;
+}
+.Window-Frame .Close-Button:hover {
+	box-shadow: 0 0 8px #F04010;
+}
+.Window-Frame .Resize-Button {
+	right: 26px;
+	background-color: #F0E010;
+}
+.Window-Frame .Resize-Button:hover {
+	box-shadow: 0 0 8px #F0E010;
+}
+.Window-Frame .Minimize-Button {
+	right: 46px;
+	background-color: #10F040;
+}
+.Window-Frame .Minimize-Button:hover {
+	box-shadow: 0 0 8px #10F040;
+}
+
+.Window-Content {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: calc(100% - 24px);
+	border-radius: 0 0 4px 4px;
+	border: solid rgba(0, 0, 0, 0.1254901961);
+	border-width: 0 1px 1px 1px;
+	background-color: #F0F0F0;
+}

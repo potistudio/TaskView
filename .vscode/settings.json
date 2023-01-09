@@ -1,0 +1,14 @@
+{
+	"liveSassCompile.settings.formats": [
+		{
+			"format": "expanded",
+			"extensionName": ".css",
+			"savePath": "/static",
+			"savePathReplacementPairs": null,
+			"indentType": "tab",
+			"indentWidth": 1
+		}
+	],
+	"liveSassCompile.settings.showOutputWindowOn": "Information",
+	"liveSassCompile.settings.generateMap": false
+}

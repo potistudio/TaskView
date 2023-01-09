@@ -1,0 +1,12 @@
+@use "./_variables" as var;
+
+%Window-Button {
+	-webkit-app-region: no-drag;
+	position: absolute;
+	top: var.$window_button_margin_top;
+	width: var.$window_button_radius;
+	height: var.$window_button_radius;
+	border-radius: 50%;
+	transition: all 0.2s 0s ease;
+	cursor: pointer;
+}

@@ -1,0 +1,68 @@
+@use "_variables" as var;
+@use "_extends";
+
+.Window-Frame {
+	-webkit-app-region: drag;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: var.$window_frame_height;
+	border-radius: var.$window_roundness var.$window_roundness 0 0;
+	border: solid var.$window_border_color;
+	border-width: 1px 1px 0 1px;
+	background-color: var.$white;
+
+	.Title {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: var.$window_frame_height;
+		line-height: var.$window_frame_height;
+		text-align: center;
+		font-size: 12px;
+	}
+
+	.Close-Button {
+		@extend %Window-Button;
+		background-color: #F04010;
+		right: var.$window_button_margin_top;
+
+		&:hover {
+			box-shadow: 0 0 8px #F04010;
+		}
+	}
+
+	.Resize-Button {
+		@extend %Window-Button;
+		right: var.$window_button_radius + var.$window_button_margin_left * 2 - 2px;
+		background-color: #F0E010;
+
+		&:hover {
+			box-shadow: 0 0 8px #F0E010;
+		}
+	}
+
+	.Minimize-Button {
+		@extend %Window-Button;
+		right: var.$window_button_radius * 2 + var.$window_button_margin_left * 3 - 2px;
+		background-color: #10F040;
+
+		&:hover {
+			box-shadow: 0 0 8px #10F040;
+		}
+	}
+}
+
+.Window-Content {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: calc(100% - var.$window_frame_height);
+	border-radius: 0 0 var.$window_roundness var.$window_roundness;
+	border: solid var.$window_border_color;
+	border-width: 0 1px 1px 1px;
+	background-color: var.$white;
+}

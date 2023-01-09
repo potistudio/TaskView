@@ -1,0 +1,9 @@
+$window_frame_height: 24px;
+$window_roundness: 4px;
+
+$window_button_radius: 12px;
+$window_button_margin_top: ($window_frame_height - $window_button_radius) / 2;
+$window_button_margin_left: $window_button_margin_top + 2px;
+
+$white: #F0F0F0;
+$window_border_color: #00000020;
